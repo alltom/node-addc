@@ -1,0 +1,32 @@
+AddC
+====
+
+Finds clusters in data using the AddC online clustering algorithm with gaussian kernel
+
+The original Python code & explanation is here:
+  http://gromgull.net/blog/2009/08/online-clustering-in-python/
+
+Original AddC paper:
+  http://www.cs.huji.ac.il/%7Ewerman/Papers/guedalia_etal99.pdf
+Kernel-based extension:
+  http://parnec.nuaa.edu.cn/zhangdq/nepl04.pdf
+
+It was originally released under the WTFPL license. This code is too:
+
+  You may have this code under the 
+  Do What The Fuck You Want To Public License 
+  http://sam.zoy.org/wtfpl/
+
+Example Usage:
+
+	var OnlineCluster = require('addc').OnlineCluster;
+	var c = new OnlineCluster(10); // max number of clusters
+
+	for (var i = 0; i < 100; i++) {
+		// can be any number of dimensions; they'll be zero-padded if they don't match
+		c.cluster([Math.random(), Math.random(), Math.random()]);
+	}
+
+	var clusters = c.trimmedClusters();
+	// var allClusters = c.clusters;
+	console.log(clusters[0].center);

@@ -1,0 +1,4 @@
+* Assign a cluster to each point (instead of just returning the centers)
+* Use a heap instead of sorting the array of inter-cluster distances
+  (the original Python used heapq's heapify())
+* Use a vector math library?

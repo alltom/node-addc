@@ -1,0 +1,25 @@
+{
+  "name": "addc",
+  "version": "0.0.1",
+  "description": "finds clusters in data using the AddC online clustering algorithm with gaussian kernel",
+  "author": "Tom Lieber <tom@alltom.com>",
+  "main": "index.js",
+  "scripts": {
+    "test": "tap test-*.js"
+  },
+  "repository": "https://github.com/alltom/node-addc.git",
+  "keywords": [
+    "clustering",
+    "clusters",
+    "machine",
+    "learning",
+    "ai"
+  ],
+  "license": "WTFPL",
+  "dependencies": {
+    "underscore": "~1.6.0"
+  },
+  "devDependencies": {
+    "tap": "~0.4.8"
+  }
+}
